@@ -47,11 +47,11 @@ for prop in ("og:type", "og:title", "og:description", "og:url", "og:site_name"):
 for name in ("twitter:card", "twitter:title", "twitter:description"):
     check(name in meta and meta[name], f"Twitter {name}")
 check("canonical" in links and links["canonical"].startswith("https://"), "absolute HTTPS canonical")
-check("DRAFT / UNPUBLISHED" in HTML, "explicit unpublished state")
+check("DRAFT / UNPUBLISHED" not in HTML, "production page has no draft indicator")
 check("https://abubakar-automation-server-01.tail1185d0.ts.net/revenue-demo/" in HTML, "customer-initiated Revenue CTA")
 check("Do not submit passwords" in HTML, "sensitive-data notice")
 check("$0" in HTML and "budget" in HTML.lower(), "zero-budget boundary")
-check("noindex" in meta["robots"] and "Disallow: /" in ROBOTS, "draft crawler gate")
+check("index" in meta["robots"] and "follow" in meta["robots"] and "Disallow: /" not in ROBOTS, "crawler indexing enabled")
 for blob in p.jsonld:
     try: data = json.loads(blob)
     except json.JSONDecodeError: data = None
