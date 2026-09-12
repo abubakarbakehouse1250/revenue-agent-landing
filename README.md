@@ -20,14 +20,17 @@ The Tailscale URL was reachable from this server with HTTP 200/TLS during the pr
 
 Prefer **GitHub Pages** on an owner-controlled repository if the owner already has a GitHub account. It supports static HTML/CSS at no hosting cost and keeps publication under the owner’s control. If the owner has no GitHub account, use Cloudflare Pages/free static hosting instead; neither account path was opened here.
 
+The dedicated repository has been prepared privately at <https://github.com/abubakarbakehouse1250/revenue-agent-landing>. It is **not public** and GitHub Pages is not enabled. The bundle remains **DRAFT / UNPUBLISHED**.
+
 ## Owner-only publication boundary
 
-1. Owner signs in or creates an account at <https://github.com/login> (or reviews <https://github.com/new>).
-2. Owner creates an owner-controlled repository named `revenue-agent-landing` and uploads the contents of this directory. The expected Pages URL is already set to `https://abubakarbakehouse1250.github.io/revenue-agent-landing/`.
-3. Owner enables Pages from the repository’s **Settings → Pages** using the deployment source/branch, then verifies the published URL and metadata at <https://docs.github.com/en/pages/quickstart>.
-4. Owner decides whether to remove the draft `noindex`/`Disallow: /` gate and publish. Do not publish until that explicit review is complete.
+1. Review the private repository contents at <https://github.com/abubakarbakehouse1250/revenue-agent-landing>.
+2. If approved, change repository visibility to public at **Settings → Danger Zone → Change repository visibility**.
+3. Enable **Settings → Pages** using the `main` branch as the deployment source.
+4. Verify the published URL `https://abubakarbakehouse1250.github.io/revenue-agent-landing/` and its metadata at <https://docs.github.com/en/pages/quickstart>.
+5. Only at that approved publication step remove the draft `noindex`/`Disallow: /` gate if public indexing is desired.
 
-No repository, DNS record, account, publication, or external communication was created by this preparation.
+Changing visibility or enabling Pages makes the page externally accessible and requires owner approval. No such action was performed.
 
 ## Local verification
 
